@@ -91,8 +91,6 @@ where s_price = max(snack_price);
 
 --'제일 비싼'만 잘라낸다.
 
-
-
 -- where 절에 통계함수를 못 쓴다.
 --제일 비싼 과자(이름, 제조사, 가격)
 select snack_name, snack_maker, snack_price
@@ -113,3 +111,70 @@ where snack_price > (select avg(snack_price) from snack);
 select snack_name, snack_price
 from snack
 where snack_weight = (select min(snack_weight) from snack);
+
+
+
+-- 농심 과자의 평균가보다 비싼 과자의 전체 정보
+select *
+from snack
+where snack_price > (select avg(snack_price) from snack where snack_maker = '농심');
+
+
+
+
+
+
+-- 해태 과자중 제일 비싼 과자보다 싼 나머지 과자들의 정보 전체
+
+select * from SNACK
+where snack_price < (select max(snack_price) from snack where snack_maker = '해태');
+
+--농심, 해태 과자 정보 전체
+
+select * from snack
+where snack_maker = '농심' or '해태';
+
+--Oracle에서는 or나 and는 그냥 쓰면 된다.
+
+--1000 < 가격 < 1500인 과자 정보 전체
+select * from SNACK
+where 1000 < snack_price and snack_price < 1500;
+
+---------------------------------------------------------
+--정렬 order by column    desc(역순)
+
+--해태 과자 전체 이름순으로 정렬
+select * from SNACK
+where snack_maker = '해태'
+order by snack_name;
+
+--과자 전체 정보를 가격순(오름차순)
+select * from SNACK
+order by snack_price, snack_name;
+
+-- 1500원이 전재산
+-- 내가 사먹을 수 있는 과자 리스트
+-- 유통기한이 짧은걸 위로
+
+select * from snack
+where snack_price <= 1500
+order by snack_expire;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

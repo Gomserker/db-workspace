@@ -1,0 +1,26 @@
+--------------- 
+Connection
+Statement          <- 얘네는 빈 껍데기
+ResultSet
+--------------
+
+실제 구동코드의 드라이버가 odbc <- 실제로 일을하는 것
+
+1. Driver를 로드 (객체화)
+Class.forName("oracle.jdbc.driver.OracleDriver");
+
+2. 연결 객체 얻기
+Connection con = DriverManager.getConnection(
+	url = jdbc:oracle:thin:@localhost:1521:xe, id, pw);
+
+()안에 들어갈 것들
+url, id, pw
+
+3. 실행 도구를 생성
+Statement st = con.createStatement();
+
+4. 결과를 얻어내는 방법
+ResultSet rs = st.excuteQuery(sql);
+
+ResultSet은 Statement가 있어야 쓸 수 있고,
+Statement는 Connection이 있어야한다.

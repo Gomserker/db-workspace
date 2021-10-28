@@ -19,6 +19,6 @@ insert into snack values (2, '새우깡', '농심', 80, 1200, sysdate);
 
 insert into snack values (snack_seq.nextval, '다이제', '오리온', 50, 1600, sysdate);
 insert into snack values (snack_seq.nextval, '고래밥', '해태', 80, 1400, sysdate);
-insert into snack values (snack_seq.nextval, '고래밥', '해태', 120, 2800, sysdate);
+insert into snack values (snack_seq.nextval, '하몽', '해태', 120, 1100, sysdate);
 
 select * from snack;
