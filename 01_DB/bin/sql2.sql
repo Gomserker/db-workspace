@@ -29,7 +29,7 @@ create table snack(
 
 insert into snack values (1, '剧颇傅', '丑缴', 60, 1000, sysdate);
 insert into snack values (50, '采霸尔', '秦怕', 70, 1200, sysdate);
-insert into snack values (3, '部彬能', '吩单', 75.5, 1300, to_date('2021-12-01', 'YYYY-MM-DD'));
+insert into snack values (17, '部彬能', '吩单', 75.5, 1300, to_date('2021-12-01', 'YYYY-MM-DD'));
 
 select * from snack;
 
