@@ -7,22 +7,22 @@ import java.sql.Statement;
 public class DB {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		
-//	1. µå¶óÀÌ¹ö ·ÎµåÇÏ±â -> ¿Ö ÁÖ¼®Ã³¸®ÇÏ´Âµ¥ ¿¬°áÀÌ µÇÁÒ? -> ¹öÀü¾÷ÀÌ µÇ¸é¼­ ConnectionÀÌ µå¶óÀÌ¹ö¸¦ ¾Ë¾Æ¼­ Ãß°¡ÇØ ÁØ´Ù. -> °á±¹ »ı·«ÇØµµ µÊ. -> ±Ùµ¥ ¿Ö ¾¸?
-//		-> ConnectionÀÌ ¸ø ÀâÀ»¶§°¡ ÀÖÀ½. ±×·¡¼­ ¹¹ ÆíÇÑ´ë·Î ÇÏ´Âµ¥ ³­ ±×³É ¾µ¶ø´Ï´Ù.
+//	1. ë“œë¼ì´ë²„ ë¡œë“œí•˜ê¸° -> ì™œ ì£¼ì„ì²˜ë¦¬í•˜ëŠ”ë° ì—°ê²°ì´ ë˜ì£ ? -> ë²„ì „ì—…ì´ ë˜ë©´ì„œ Connectionì´ ë“œë¼ì´ë²„ë¥¼ ì•Œì•„ì„œ ì¶”ê°€í•´ ì¤€ë‹¤. -> ê²°êµ­ ìƒëµí•´ë„ ë¨. -> ê·¼ë° ì™œ ì”€?
+//		-> Connectionì´ ëª» ì¡ì„ë•Œê°€ ìˆìŒ. ê·¸ë˜ì„œ ë­ í¸í•œëŒ€ë¡œ í•˜ëŠ”ë° ë‚œ ê·¸ëƒ¥ ì“¸ëë‹ˆë‹¤.
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		
-//	2. ¿¬°á °´Ã¼ ¾ò±â
-		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-		Connection con = DriverManager.getConnection(url, "bg", "bg");
+//	2. ì—°ê²° ê°ì²´ ì–»ê¸°
+		String url = "jdbc:oracle:thin:@localhost:152asdfser1:xe";
+		Connection con = DriverManager.getConnection(url, "id", "pw");
 //		System.out.println("Connection Compelete");
 		
-//	3. ½ÇÇà µµ±¸ »ı¼º
+//	3. ì‹¤í–‰ ë„êµ¬ ìƒì„±
 		Statement st = con.createStatement();
 		
-//	4. °á°ú¸¦ ¾ò±â
+//	4. ê²°ê³¼ë¥¼ ì–»ê¸°
 		String sql = "select * from db_test";
 		ResultSet rs = st.executeQuery(sql);
-//		db_test Å×ÀÌºí ÀüÃ¼°¡ rs¿¡ µé¾î°¡ ÀÖÀ½.
+//		db_test í…Œì´ë¸” ì „ì²´ê°€ rsì— ë“¤ì–´ê°€ ìˆìŒ.
 		
 		if(rs.next()) {
 			String name = rs.getString("d_name");
@@ -32,8 +32,8 @@ public class DB {
 			System.out.println(age);
 		}
 		
-//		java·Î db¸¦ Á¦¾îÇÒ¶© ¹İµå½Ã close() ¸Ş¼Òµå·Î ´İ¾ÆÁà¾ßÇÑ´Ù.
-//		²À ¹İµå½Ã ¹«Á¶°Ç »ç¿ëÇÑ ¿ª¼øÀ¸·Î ´İ¾ÆÁà¾ßÇÑ´Ù.
+//		javaë¡œ dbë¥¼ ì œì–´í• ë• ë°˜ë“œì‹œ close() ë©”ì†Œë“œë¡œ ë‹«ì•„ì¤˜ì•¼í•œë‹¤.
+//		ê¼­ ë°˜ë“œì‹œ ë¬´ì¡°ê±´ ì‚¬ìš©í•œ ì—­ìˆœìœ¼ë¡œ ë‹«ì•„ì¤˜ì•¼í•œë‹¤.
 		rs.close();
 		st.close();
 		con.close();
