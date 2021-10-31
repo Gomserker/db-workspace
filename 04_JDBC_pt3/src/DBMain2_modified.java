@@ -13,11 +13,12 @@ public class DBMain2_modified {
 		Scanner input = new Scanner(System.in);
 		
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-		String sql = "insert into db_test values (db_test_seq.nextval, ?, ?)";
 
 		Connection con = DriverManager.getConnection(url, "bg", "bg");
 		System.out.println("connection complete with maven");
 		
+		String sql = "insert into db_test values (db_test_seq.nextval, ?, ?)";
+
 		System.out.print("¿Ã∏ß : ");
 		String name = input.next();
 		

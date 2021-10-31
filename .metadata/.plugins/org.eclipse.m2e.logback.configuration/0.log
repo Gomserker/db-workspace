@@ -606,3 +606,7 @@
 2021-10-31 22:37:43,450 [Worker-116: Launching DBMain3_modified] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MSI\Documents\GitHub\db-workspace\04_JDBC_pt3\src\main\resources
 2021-10-31 22:37:43,450 [Worker-116: Launching DBMain3_modified] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2021-10-31 22:37:43,451 [Worker-116: Launching DBMain3_modified] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MSI\Documents\GitHub\db-workspace\04_JDBC_pt3\src\test\resources
+2021-11-01 00:46:14,188 [Worker-142: Launching DBMain2_modified] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-11-01 00:46:14,189 [Worker-142: Launching DBMain2_modified] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MSI\Documents\GitHub\db-workspace\04_JDBC_pt3\src\main\resources
+2021-11-01 00:46:14,190 [Worker-142: Launching DBMain2_modified] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-11-01 00:46:14,191 [Worker-142: Launching DBMain2_modified] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MSI\Documents\GitHub\db-workspace\04_JDBC_pt3\src\test\resources
