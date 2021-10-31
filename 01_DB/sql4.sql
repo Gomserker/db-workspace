@@ -108,7 +108,7 @@ where snack_price > (select avg(snack_price) from snack);
 
 -- 제일 가벼운 과자(이름, 가격)
 
-select snack_name, snack_price
+select snack_name, snack_price, snack_weight
 from snack
 where snack_weight = (select min(snack_weight) from snack);
 
@@ -158,7 +158,7 @@ order by snack_price, snack_name;
 
 select * from snack
 where snack_price <= 1500
-order by snack_expire;
+order by snack_price desc;
 
 
 
