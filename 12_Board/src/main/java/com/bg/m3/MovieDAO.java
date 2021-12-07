@@ -126,8 +126,76 @@ public class MovieDAO {
 		} finally {
 			DBManager.close(con, pstmt, null);
 		}
+	}
+
+	public static void updateMovie(HttpServletRequest request) {
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		
+		String sql = "update movie_test set m_title=?, m_actor=?, m_story=? where m_no=?";
+		
+		try {
+			con = DBManager.connect();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, request.getParameter("title"));
+			pstmt.setString(2, request.getParameter("actor"));
+			pstmt.setString(3, request.getParameter("story"));
+			pstmt.setInt(4, Integer.parseInt(request.getParameter("no")));
+			
+			if(pstmt.executeUpdate() ==1) {
+				request.setAttribute("r", "수정 성공");
+			} else {
+				request.setAttribute("r", "수정 실패");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			request.setAttribute("r", "DB 에러");
+		} finally {
+			DBManager.close(con, pstmt, null);
+		}
 		
 		
+	}
+
+	public static void extMovie(HttpServletRequest request) {
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		String sql = "select * from movie_test where m_no=?";
+		
+		try {
+			con = DBManager.connect();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, Integer.parseInt(request.getParameter("num")));
+			rs = pstmt.executeQuery();
+			
+			Movie m = null;
+			if (rs.next()) {
+				m = new Movie();
+				m.setNo(rs.getInt("m_no"));
+				m.setTitle(rs.getString("m_title"));
+				m.setActor(rs.getString("m_actor"));
+				m.setImg(rs.getString("m_img"));
+				m.setStory(rs.getString("m_story"));
+				request.setAttribute("movie", m);
+			}
+			
+			
+			if(pstmt.executeUpdate() ==1) {
+				request.setAttribute("r", "수정 성공");
+			} else {
+				request.setAttribute("r", "수정 실패");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			request.setAttribute("r", "DB error");
+		} finally {
+			DBManager.close(con, pstmt, rs);
+		}
 		
 	}
 

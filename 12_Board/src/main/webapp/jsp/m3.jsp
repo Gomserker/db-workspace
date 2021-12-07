@@ -45,7 +45,7 @@ ${r }
 	<c:forEach var="m" items="${movies}">
 		<table id="mTbl2">
 			<tr>
-				<td id="m_td2" rowspan="4"><img src="${m.img}" id="movieImg"></td>
+				<td id="m_td2" rowspan="4"><img src="img/${m.img}" id="movieImg"></td>
 			</tr>
 			<tr>
 				<td>제목</td>
@@ -62,8 +62,8 @@ ${r }
 			</tr>
 			<tr>
 				<td>
-					<button>수정</button>
-					<button>수정</button>
+					<button onclick="location.href='MovieUpdateC?num=${m.no}'">수정</button>
+					<button onclick="updateMovie('${m.title}', '${m.actor}', '${m.story}', '${m.no}')">수정(자바스크립트)</button>
 					<button onclick="deleteMovie(${m.no})">삭제</button>
 				</td>
 			</tr>
