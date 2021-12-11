@@ -16,7 +16,7 @@
 			<td class="siteMenu" align="center"><a  href="HC">Home</a></td>
 			<td class="siteMenu" align="center"><a  href="Menu2">[2]</a></td>
 			<td class="siteMenu" align="center"><a  href="Menu3">[Movie Info]</a></td>
-			<td class="siteMenu" align="center"><a  href="">[Review]</a></td>
+			<td class="siteMenu" align="center"><a  href="Menu4">[Review]</a></td>
 		</tr>
 		<tr>
 			<td colspan="5">

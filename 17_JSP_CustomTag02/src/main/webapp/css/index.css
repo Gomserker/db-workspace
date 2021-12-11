@@ -1,0 +1,65 @@
+@charset "UTF-8";
+body{
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	color: white;
+	padding: 10px;
+}
+
+#site {
+	margin-left: auto;
+	margin-right: auto;
+	width: 900px;
+}
+
+#title {
+	font-size: 30pt;
+	color: white;
+	font-weight: 500;
+	padding-bottom: 15px;
+}
+
+a{
+	text-decoration: none;
+}
+
+#menu a{
+	color: yellow;
+	font-size: 20pt;
+	margin-right: 80px;
+}
+
+#menu a:hover{
+	font-size: 20pt;
+	font-weight: 900;
+	text-shadow: 10px 10px 10px yellow;
+}
+
+#loginArea{
+	position: absolute;
+	right: 100px;
+}
+#loginAreaTbl{
+	width: 220px;
+	border: none;
+	font-size: 13pt;
+}
+#loginAreaTbl td{
+	width:130px;
+	text-align: center;
+}
+#id{
+ width: 100px;
+}
+#pw{
+ width: 100px;
+	
+}
+.loginBtn{
+	color: black;
+	width: 100px;
+	height: 30px;
+	
+}
+

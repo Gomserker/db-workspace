@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: ng;
+	src: url(NanumGothic.eot);
+	src: local(※), url(NanumGothic.woff) format(‘woff’)
+}
+
+body {
+	font-family: '나눔고딕', 'NanumGothic', ng; margin : 10px;
+	padding: 10px;
+	text-align: center;
+	margin: 10px;
+}
+
+table {
+	width: 100%;
+	height: 500px;
+	font-size: 10pt;
+	text-align: center;
+	border-style: dashed;
+}
+
+td{
+	background-color: #f0f0ff;
+	color: black;
+	font-size: 20pt;
+}
+
+input {
+	width: 300px;
+	height: 30px;
+	font-size: 15pt;
+}
+
+select {
+	width: 300px;
+	height: 50px;
+	font-size: 15pt;
+}
+
+button {
+	width: 100pt;
+	height: 40pt;
+	font-size: large;
+	color: white;
+	border-style: hidden;
+	background-color: black;
+}
+
+
+#a{
+	border: 3px solid #ffb5b5;
+}
+#a #td1{
+	background-color: #ffb5b5;
+}
+#a .a2{
+	color: #ffb5b5;
+}
+
+
+
+#b{
+	border: 3px solid #a7d3d3;
+}
+#b #td1{
+	background-color: #a7d3d3;
+}
+#b .b2{
+	color: #a7d3d3;
+}
+#c{
+	border: 3px solid #8eff8e;
+}
+#c #td1{
+	background-color: #8eff8e;
+}
+#c .c2{
+	color: #8eff8e;
+}
+#d{
+	border: 3px solid #f7c888;
+}
+#d #td1{
+	background-color: #f7c888;
+}
+#d .d2{
+		color: #f7c888;
+}
+
+
+
+
+
+
+
+
+
+
+
