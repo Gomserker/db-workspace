@@ -20,7 +20,8 @@
 			</tr>
 			<tr>
 				<td colspan="2">
-					<button>로그인</button>
+					<button class="loginBtn">로그인</button>
+					<button class="loginBtn" onclick="location.href='RegAccountC'">회원가입</button>
 				</td>
 			</tr>
 		</table>
